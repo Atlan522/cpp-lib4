@@ -122,6 +122,7 @@ public:
 			fileName = dirp->d_name;
 			if(isDirectory(path + "/" + fileName)){
 				childPaths.push_back(externPath + "/" + fileName);
+				continue;
 			}
 			if(!m_filter.empty()){
 				if(m_filter.find(fileName.getExtension()) == m_filter.end()) continue;
